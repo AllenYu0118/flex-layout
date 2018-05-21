@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>flex-direction</title>
+    <link rel="stylesheet" href="public.css">
+    <style>
+        .row {
+            flex-direction: row;
+        }
+        .row-reverse {
+            flex-direction: row-reverse;
+        }
+        .column {
+            flex-direction: column;
+        }
+        .column-reverse {
+            flex-direction: column-reverse;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>1、flex-direction: row; 默认值，主轴为水平方向（main axis），起点在左端（main start）</p>
+        <div class="flex row">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+        </div>
+
+        <p>2、flex-direction: row-reverse; 主轴为水平方向（main axis），起点在右端（main end）</p>
+        <div class="flex row-reverse">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+        </div>
+
+        <p>3、flex-direction: column; 主轴为垂直方向（cross axis），起点在顶端（cross start）</p>
+        <div class="flex column">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+        </div>
+
+        <p>4、flex-direction: column-reverse; 主轴为垂直方向（cross axis），起点在底端（cross end）</p>
+        <div class="flex column-reverse">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+        </div>
+    </div>
+    
+</body>
+</html>

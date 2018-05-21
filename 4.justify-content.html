@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>justify-content</title>
+    <link rel="stylesheet" href="public.css">
+    <style>
+        .flex-start {
+            justify-content: flex-start;
+        }
+        .flex-end {
+            justify-content: flex-end;
+        }
+        .center {
+            justify-content: center;
+        }
+        .space-between {
+            justify-content: space-between;
+        }
+        .space-around {
+            justify-content: space-around;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>1、justify-content: flex-start; 默认值，左对齐</p>
+        <div class="flex flex-start">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+        </div>
+
+        <p>2、justify-content: flex-end; 右对齐</p>
+        <div class="flex flex-end">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+        </div>
+
+        <p>3、justify-content: center; 居中</p>
+        <div class="flex center">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+        </div>
+
+        <p>4、justify-content: space-between; 两端对齐，项目之间的间隔都相等</p>
+        <div class="flex space-between">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+        </div>
+
+        <p>5、justify-content: space-around; 每个项目的两侧间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍</p>
+        <div class="flex space-around">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item" style="width: 50px">3</div>
+            <div class="item">4</div>
+            <div class="item" style="width: 50px">5</div>
+            <div class="item">6</div>
+        </div>
+    </div>
+    
+</body>
+</html>
