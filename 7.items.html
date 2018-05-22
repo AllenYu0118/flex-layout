@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>align-content</title>
+    <link rel="stylesheet" href="public.css">
+    <style>
+        .order1 {
+            order: -1;
+        }
+        .order2 {
+            order: -5;
+        }
+
+        .flex-grow .item {
+            flex-grow: 1;
+        }
+
+        .flex-grow .grow0 {
+            flex-grow: 0;
+        }
+
+        .flex-grow .grow1 {
+            flex-grow: 2;
+        }
+
+        .flex-grow .grow2 {
+            flex-grow: 4;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>1、order 属性定义项目的排列顺序。数值越小，排列越靠前，默认为 0.</p>
+        <div class="flex">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item order1">3</div>
+            <div class="item">4</div>
+            <div class="item order2">5</div>
+            <div class="item">6</div>
+        </div>
+
+        <p>2、flex-grow 属性定义了项目的放大比例，默认为 0，即如果存在剩余空间，也不放大。</p>
+        <div class="flex flex-grow">
+            <div class="item grow0">1</div>
+            <div class="item">2</div>
+            <div class="item grow1">3</div>
+            <div class="item">4</div>
+            <div class="item grow2">5</div>
+            <div class="item">6</div>
+        </div>
+
+        <p>4、flex-shrink </p>
+        <div class="flex flex-grow">
+            <div class="item grow0">1</div>
+            <div class="item">2</div>
+            <div class="item grow1">3</div>
+            <div class="item">4</div>
+            <div class="item grow2">5</div>
+            <div class="item">6</div>
+        </div>
+    </div>
+    
+</body>
+</html>

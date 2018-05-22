@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>align-content</title>
+    <link rel="stylesheet" href="public.css">
+    <style>
+        .container {
+            background: none;
+        }
+        .flex {
+            flex-flow: row wrap;
+            background-color: whitesmoke;
+            height: 300px;
+        }
+        .flex-start {
+            align-content: flex-start;
+        }
+        .flex-end {
+            align-content: flex-end;
+        }
+        .center {
+            align-content: center;
+        }
+        .space-between {
+            align-content: space-between;
+        }
+        .space-around {
+            align-content: space-around;
+        }
+        .stretch {
+            align-content: stretch;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>1、align-content: flex-start; 交叉轴的起点对齐</p>
+        <div class="flex flex-start">
+            <div class="item" style="width: 50px;">1</div>
+            <div class="item" style="width: 200px;">2</div>
+            <div class="item">3</div>
+            <div class="item" style="width: 150px;">4</div>
+            <div class="item">5</div>
+            <div class="item" style="width: 50px;">6</div>
+            <div class="item" style="width: 50px;">7</div>
+            <div class="item" style="width: 200px;">8</div>
+            <div class="item">9</div>
+            <div class="item" style="width: 150px;">10</div>
+            <div class="item">11</div>
+            <div class="item" style="width: 50px;">12</div>
+        </div>
+
+        <p>2、align-content: flex-end; 交叉轴的终点对齐</p>
+        <div class="flex flex-end">
+            <div class="item" style="width: 50px;">1</div>
+            <div class="item" style="width: 200px;">2</div>
+            <div class="item">3</div>
+            <div class="item" style="width: 150px;">4</div>
+            <div class="item">5</div>
+            <div class="item" style="width: 50px;">6</div>
+            <div class="item" style="width: 50px;">7</div>
+            <div class="item" style="width: 200px;">8</div>
+            <div class="item">9</div>
+            <div class="item" style="width: 150px;">10</div>
+            <div class="item">11</div>
+            <div class="item" style="width: 50px;">12</div>
+        </div>
+
+        <p>3、align-content: center; 交叉轴的中点对齐</p>
+        <div class="flex center">
+            <div class="item" style="width: 50px;">1</div>
+            <div class="item" style="width: 200px;">2</div>
+            <div class="item">3</div>
+            <div class="item" style="width: 150px;">4</div>
+            <div class="item">5</div>
+            <div class="item" style="width: 50px;">6</div>
+            <div class="item" style="width: 50px;">7</div>
+            <div class="item" style="width: 200px;">8</div>
+            <div class="item">9</div>
+            <div class="item" style="width: 150px;">10</div>
+            <div class="item">11</div>
+            <div class="item" style="width: 50px;">12</div>
+        </div>
+
+        <p>4、align-content: space-between; 与交叉轴的两端对齐，轴线之间的间隔平均分布</p>
+        <div class="flex space-between">
+            <div class="item" style="width: 50px;">1</div>
+            <div class="item" style="width: 200px;">2</div>
+            <div class="item">3</div>
+            <div class="item" style="width: 150px;">4</div>
+            <div class="item">5</div>
+            <div class="item" style="width: 50px;">6</div>
+            <div class="item" style="width: 50px;">7</div>
+            <div class="item" style="width: 200px;">8</div>
+            <div class="item">9</div>
+            <div class="item" style="width: 150px;">10</div>
+            <div class="item">11</div>
+            <div class="item" style="width: 50px;">12</div>
+        </div>
+
+        <p>
+            5、align-content: space-around; 每根轴线的上下间隔都相等。<br/>
+            所以，轴线之间的间隔比轴线与上下边框的间隔大一倍。<br/>
+            <small style="font-size: 18px; color: #888;">PS: 为了让看的更清晰，我把项目父元素的上下内边距去掉了</small>
+        </p>
+        <div class="flex space-around" style="padding: 0 10px;">
+            <div class="item" style="width: 50px;">1</div>
+            <div class="item" style="width: 200px;">2</div>
+            <div class="item">3</div>
+            <div class="item" style="width: 150px;">4</div>
+            <div class="item">5</div>
+            <div class="item" style="width: 50px;">6</div>
+            <div class="item" style="width: 50px;">7</div>
+            <div class="item" style="width: 200px;">8</div>
+            <div class="item">9</div>
+            <div class="item" style="width: 150px;">10</div>
+            <div class="item">11</div>
+            <div class="item" style="width: 50px;">12</div>
+        </div>
+
+        <p>
+            6、align-content: stretch; 默认值，轴线占满整个交叉轴。<br/>
+            <small style="font-size: 18px; color: #888;">PS: 项目的 height 属性为 auto，或者未设置才会起作用，参考下面 2、4、7、8、10 项目</small>
+        </p>
+        <div class="flex stretch">
+            <div class="item" style="width: 50px;">1</div>
+            <div class="item" style="width: 200px; height: auto;">2</div>
+            <div class="item">3</div>
+            <div class="item" style="width: 150px; height: auto;">4</div>
+            <div class="item">5</div>
+            <div class="item" style="width: 50px;">6</div>
+            <div class="item" style="width: 50px; height: auto;">7</div>
+            <div class="item" style="width: 200px; height: auto;">8</div>
+            <div class="item">9</div>
+            <div class="item" style="width: 150px; height: auto;">10</div>
+            <div class="item">11</div>
+            <div class="item" style="width: 50px;">12</div>
+        </div>
+    </div>
+    
+</body>
+</html>
