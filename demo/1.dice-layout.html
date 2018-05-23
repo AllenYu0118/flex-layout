@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>骰子布局</title>
+    <link rel="stylesheet" href="../public.css">
+    <style>
+        .face {
+            margin: 16px;
+            padding: 4px;
+            background-color: #e7e7e7;
+            width: 104px;
+            height: 104px;
+            object-fit: contain;
+            box-shadow:
+                inset 0 5px white, 
+                inset 0 -5px #bbb,
+                inset 5px 0 #d7d7d7, 
+                inset -5px 0 #d7d7d7;
+            
+            border-radius: 10%;
+            display: flex;
+        }
+
+        .face-item {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            margin: 4px;
+            background-color: #000;
+            box-shadow: inset 0 3px #111,
+                inset 0 -3px #555;
+        }
+
+        .column {
+            width: 100%;
+            display: flex;
+        }
+
+        .one {
+            justify-content: center;
+            align-items: center;
+        }
+
+        .two {
+            justify-content: space-between;
+        }
+
+        .two .face-item:last-of-type {
+            align-self: flex-end;
+        }
+
+        .three .face-item:nth-of-type(2){
+            align-self: center;
+        }
+
+        .three .face-item:nth-of-type(3){
+            align-self: flex-end;
+        }
+
+        .four {
+            flex-wrap: wrap;
+            align-content: space-between;
+        }
+
+        .four .column {
+            justify-content: space-between;
+        }
+
+        .five {
+            flex-wrap: wrap;
+            align-content: space-between;
+        }
+
+        .five .column {
+            justify-content: space-between;
+        }
+
+        .five .column:nth-of-type(2) {
+            justify-content: center;
+        }
+
+        .six {
+            flex-wrap: wrap;
+            align-content: space-between;
+        }
+
+        .six .column {
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>1、骰子布局，一个点</p>
+        <div class="face one">
+            <div class="face-item"></div>
+        </div>
+
+        <p>2、骰子布局，两个点</p>
+        <div class="face two">
+            <div class="face-item"></div>
+            <div class="face-item"></div>
+        </div>
+
+        <p>3、骰子布局，三个点</p>
+        <div class="face three">
+            <div class="face-item"></div>
+            <div class="face-item"></div>
+            <div class="face-item"></div>
+        </div>
+
+        <p>4、骰子布局，四个点</p>
+        <div class="face four">
+            <div class="column">
+                <div class="face-item"></div>
+                <div class="face-item"></div>
+            </div>
+            <div class="column">
+                <div class="face-item"></div>
+                <div class="face-item"></div>
+            </div>            
+        </div>
+
+        <p>5、骰子布局，五个点</p>
+        <div class="face five">
+            <div class="column">
+                <div class="face-item"></div>
+                <div class="face-item"></div>
+            </div>
+            <div class="column">
+                <div class="face-item"></div>
+            </div>
+            <div class="column">
+                <div class="face-item"></div>
+                <div class="face-item"></div>
+            </div>
+        </div>
+
+        <p>6、骰子布局，六个点</p>
+        <div class="face six">
+            <div class="column">
+                <div class="face-item"></div>
+                <div class="face-item"></div>
+            </div>
+            <div class="column">
+                <div class="face-item"></div>
+                <div class="face-item"></div>
+            </div>
+            <div class="column">
+                <div class="face-item"></div>
+                <div class="face-item"></div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
