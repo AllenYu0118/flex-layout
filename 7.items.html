@@ -29,6 +29,26 @@
         .flex-grow .grow2 {
             flex-grow: 4;
         }
+
+        .flex-shrink  .shrink1{
+            flex-shrink: 2;
+        }
+
+        .flex-shrink  .shrink2{
+            flex-shrink: 3;
+        }
+
+        .flex-basis .basis1 {
+            flex-basis: 300px;
+        }
+
+        .flex-basis .basis2 {
+            flex-basis: 200px;
+        }
+
+        .flex-collect .collect1 {
+            flex: none;
+        }
     </style>
 </head>
 <body>
@@ -53,13 +73,33 @@
             <div class="item">6</div>
         </div>
 
-        <p>4、flex-shrink </p>
-        <div class="flex flex-grow">
-            <div class="item grow0">1</div>
+        <p>3、flex-shrink 属性定义了项目的缩小比例，默认为 1，即如果空间不足，该项目将缩小</p>
+        <div class="flex flex-shrink">
+            <div class="item shrink1">1</div>
+            <div class="item" style="width: 200px;">2</div>
+            <div class="item shrink2">3</div>
+            <div class="item" style="width: 300px;">4</div>
+            <div class="item">5</div>
+            <div class="item" style="width: 150px;">6</div>
+        </div>
+
+        <p>4、flex-basis 属性定义了在分配多余空间之前，项目占据的主轴空间，浏览器根据这个属性，计算主轴是否有多余的空间。它的默认值为 auto，即项目的本来大小</p>
+        <div class="flex flex-basis">
+            <div class="item basis1">1</div>
             <div class="item">2</div>
-            <div class="item grow1">3</div>
+            <div class="item basis2">3</div>
             <div class="item">4</div>
-            <div class="item grow2">5</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+        </div>
+
+        <p>5、flex 属性是 flex-grow，flex-shrink 和 flex-basis 的简写，默认值为 0 1 auto。后两个属性可选。</p>
+        <div class="flex flex-collect">
+            <div class="item basis1">1</div>
+            <div class="item">2</div>
+            <div class="item basis2">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
             <div class="item">6</div>
         </div>
     </div>
