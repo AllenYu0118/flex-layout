@@ -39,9 +39,45 @@
             display: flex;
         }
 
-        .one {
+        .flex {
+            display: flex;
+            flex-flow: row wrap;
+        }
+
+        .top-center {
+            justify-content: center;
+        }
+
+        .top-right {
+            justify-content: flex-end;
+        }
+
+        .center-left {
+            align-items: center;
+        }
+
+        .center-center {
             justify-content: center;
             align-items: center;
+        }
+
+        .center-right {
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .bottom-left {
+            align-items: flex-end;
+        }
+
+        .bottom-center {
+            justify-content: center;
+            align-items: flex-end;
+        }
+
+        .bottom-right {
+            justify-content: right;
+            align-items: flex-end;
         }
 
         .two {
@@ -95,8 +131,42 @@
 <body>
     <div class="container">
         <p>1、骰子布局，一个点</p>
-        <div class="face one">
-            <div class="face-item"></div>
+        <div class="flex">
+            <div class="face">
+                <div class="face-item"></div>
+            </div>
+            
+            <div class="face top-center">
+                <div class="face-item"></div>
+            </div>
+
+            <div class="face top-right">
+                <div class="face-item"></div>
+            </div>
+
+            <div class="face center-left">
+                <div class="face-item"></div>
+            </div>
+
+            <div class="face center-center">
+                <div class="face-item"></div>
+            </div>
+
+            <div class="face center-right">
+                <div class="face-item"></div>
+            </div>
+
+            <div class="face bottom-left">
+                <div class="face-item"></div>
+            </div>
+
+            <div class="face bottom-center">
+                <div class="face-item"></div>
+            </div>
+
+            <div class="face bottom-right">
+                <div class="face-item"></div>
+            </div>
         </div>
 
         <p>2、骰子布局，两个点</p>

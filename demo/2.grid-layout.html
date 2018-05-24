@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>网格布局</title>
+    <link rel="stylesheet" href="../public.css">
+    <style>
+        .grid {
+            display: flex;
+        }
+
+        .grid-cell {
+            background-color: darkcyan;
+            border-radius: 5px;
+            margin: 10px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            font-size: 18px;
+            color: #fff;
+            font-weight: bold;
+            flex: 1
+        }
+
+        /* 百分比布局 */
+        .u-1of2 {
+            flex: 0 0 50%;
+        }
+        .u-1of3 {
+            flex: 0 0 33.3333%;
+        }
+        .u-1of4 {
+            flex: 0 0 25%;
+        }
+
+        /* 圣杯布局 */
+        .grid-body {
+            display: flex;
+            flex-flow: column;
+            text-align: center;
+            color: #fff;
+            font-size: 26px;
+            font-weight: bold;
+        }
+        header,
+        footer {
+            flex: 1;
+            height: 100px;
+            line-height: 100px;
+            background-color: chocolate;
+            
+        }
+        section {
+            flex: 1;
+            height: 600px;
+            background-color: darkkhaki;
+            display: flex;
+            line-height: 600px;
+        }
+        .grid-content {
+            flex: 1;
+        }
+
+        nav, aside {
+            flex: 0 0 200px;
+            background-color: blueviolet;
+        }
+        nav {
+            order: -1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>基本网格布局</p>
+        <div class="grid">
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+        </div>
+        <div class="grid">
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+        </div>
+        <div class="grid">
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+        </div>
+
+        <p>百分比布局</p>
+        <div class="grid">
+            <div class="grid-cell u-1of2"> 50% </div>
+            <div class="grid-cell">flex:1</div>
+        </div>
+        <div class="grid">
+            <div class="grid-cell u-1of3">33.333%</div>
+            <div class="grid-cell">flex:1</div>
+        </div>
+        <div class="grid">
+            <div class="grid-cell u-1of4">25%</div>
+            <div class="grid-cell">flex:1</div>
+        </div>
+
+        <p>圣杯布局</p>
+        <div class="grid-body">
+            <header>#header</header>
+            <section>
+                <div class="grid-content"> #content </div>
+                <nav> #nav </nav>
+                <aside> #aside </aside>
+            </section>
+            <footer> #footer </footer>
+        </div>
+    </div>
+</body>
+</html>
