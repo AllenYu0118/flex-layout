@@ -7,6 +7,11 @@
     <title>网格布局</title>
     <link rel="stylesheet" href="../public.css">
     <style>
+        * {
+            padding: 0;
+            margin: 0;
+            line-height: 30px;
+        }
         .grid {
             display: flex;
         }
@@ -70,6 +75,41 @@
         nav {
             order: -1;
         }
+
+        .input-wrap {
+            display: flex;
+        }
+
+        .input-field {
+            flex: 1;
+            height: 30px;
+            line-height: 30px;
+        }
+
+        .input-txt {
+            font-size: 16px;
+            margin-right: 10px;
+            display: inline-block;
+            line-height: 30px;
+        }
+
+        .input-btn {
+            line-height: 30px;
+            margin-left: 10px;
+        }
+
+        .media-wrap {
+            display: flex;
+            align-items: flex-srart;
+        }
+        .media-wrap img {
+            margin-right: 10px;
+            margin-left: 20px;
+        }
+        .media-wrap p {
+            flex: 1;
+            font-weight: normal;
+        }
     </style>
 </head>
 <body>
@@ -114,6 +154,24 @@
                 <aside> #aside </aside>
             </section>
             <footer> #footer </footer>
+        </div>
+    </div>
+
+    <div class="container">
+        <p>輸入框佈局</p>
+        <div class="input-wrap">
+            <span class="input-txt">輸入框屬性：</span>
+            <input type="text" class="input-field">
+            <button class="input-btn">輸入框按鈕</button>
+        </div>
+
+        <p>懸掛式佈局</p>
+        <div class="media-wrap">
+            <p>This feature depends on AsyncTask of Swoole, your need to set swoole.task_worker_num in config/laravels.php firstly. The
+            performance of task processing is influenced by number of Swoole task process, you need to set task_worker_num appropriately.
+         This feature depends on AsyncTask of Swoole, your need to set swoole.task_worker_num in config/laravels.php firstly. The
+        performance of task processing is influenced by number of Swoole task process, you need to set task_worker_num appropriately.</p>
+            <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1527479535642&di=9818246ee262410d744c48668b792bdb&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F16%2F42%2F96%2F56e58PICAu9_1024.jpg" alt="" width="100" height="100">
         </div>
     </div>
 </body>

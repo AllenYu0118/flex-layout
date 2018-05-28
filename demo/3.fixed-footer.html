@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>固定底栏布局</title>
+    <link rel="stylesheet" href="../public.css">
+    <style>
+        html,body{
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            padding: 0;
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        header {
+            height: 100px;
+            line-height: 100px;
+            background-color: brown;
+        }
+
+        .content {
+            flex: 1;
+            background-color: antiquewhite;
+        }
+
+        footer {
+            height: 50px;
+            line-height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>#myHeader</header>
+        <div class="content">
+            #content
+        </div>
+        <footer>#myFooter</footer>
+    </div>
+</body>
+</html>
